@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(30, 84%, 45%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(30, 34%, 35%);
+  --secondary-foreground: hsl(60, 9.1%, 97.8%);
+  --accent: hsl(15, 89%, 60%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --success: hsl(165, 65%, 35%);
+  --warning: hsl(39, 87%, 50%);
+  --error: hsl(0, 70%, 55%);
+  --neutral: hsl(48, 33%, 97%);
+  --darkbrown: hsl(30, 33%, 15%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(30, 84%, 45%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Force all buttons and clickable elements to be visible */
+button, div[role="button"], [onclick], .auth-button {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+/* Ensure form buttons are never hidden */
+form button, form [role="button"], form [onclick] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+  background-color: #2563eb !important;
+  color: white !important;
+  border: none !important;
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+  
+  .bg-secondary {
+    background-color: hsl(var(--secondary));
+  }
+  
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+  
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  
+  .bg-warning {
+    background-color: hsl(var(--warning));
+  }
+  
+  .bg-error {
+    background-color: hsl(var(--error));
+  }
+  
+  .bg-neutral {
+    background-color: hsl(var(--neutral));
+  }
+  
+  .bg-darkbrown {
+    background-color: hsl(var(--darkbrown));
+  }
+  
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+  
+  .text-secondary {
+    color: hsl(var(--secondary));
+  }
+  
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+  
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+  
+  .text-error {
+    color: hsl(var(--error));
+  }
+  
+  .text-darkbrown {
+    color: hsl(var(--darkbrown));
+  }
+  
+  .border-primary {
+    border-color: hsl(var(--primary));
+  }
+  
+  .border-secondary {
+    border-color: hsl(var(--secondary));
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

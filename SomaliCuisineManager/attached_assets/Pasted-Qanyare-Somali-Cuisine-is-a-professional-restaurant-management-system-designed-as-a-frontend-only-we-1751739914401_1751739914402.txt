@@ -1,0 +1,103 @@
+Qanyare Somali Cuisine is a professional restaurant management system designed as a frontend-only web application to manage food orders, table and hall reservations, and basic customer interaction for a Somali restaurant. The system is built to run entirely on localhost, using HTML, CSS, and JavaScript (no backend language like PHP) with in-memory storage (i.e., all data is stored in the browser's memory and is lost when the page reloads).
+
+💡 System Modules
+1. User Side (Customer-Facing Interface)
+Built with HTML, CSS, and JavaScript. Stores data in-browser (via JavaScript memory, localStorage, or sessionStorage).
+
+Food Ordering System
+
+Browse food items by category.
+
+Add items to cart and place an order.
+
+Orders are stored temporarily (in-memory or localStorage).
+
+Member Account Management
+
+Users can "register" and "log in" with mock account logic.
+
+User profile info is stored using localStorage.
+
+Support for password update and simple client-side validation.
+
+Hall and Table Reservation
+
+Users can choose a date, time, table/hall, and number of guests.
+
+Reservation data is stored in memory during the session.
+
+Contact Us Page (Static)
+
+Contains restaurant address, phone, email, and a contact form (form may just log data or simulate submission).
+
+About Us Page (Static)
+
+Brief overview of the restaurant, values, and history.
+
+2. Admin Side (Simulated Admin Panel)
+Also built entirely in HTML/CSS/JS and protected by a simple client-side login.
+
+Category Management
+
+Add/edit/remove food categories (e.g., Drinks, Starters, Main Course).
+
+Food List Management
+
+Add new food items with name, price, image, and category.
+
+Edit or remove existing items.
+
+Hall and Table List Management
+
+Manage availability of tables and halls (name, capacity, status).
+
+Orders Management
+
+View and update order statuses.
+
+All orders are stored temporarily in-memory or localStorage.
+
+Staff Management
+
+Manage mock staff data (name, role).
+
+Admin Dashboard
+
+Display counts: total orders, reservations, food items, etc.
+
+Charts and summaries (using Chart.js or other JS libraries).
+
+⚙️ Technical Approach
+Tech Stack:
+
+HTML + CSS (design)
+
+JavaScript (logic, storage, interactivity)
+
+Optional: TailwindCSS, Bootstrap for UI
+
+Optional: Chart.js for admin analytics
+
+Storage:
+
+sessionStorage for temporary data (clears on tab close)
+
+localStorage for simulated persistence across sessions
+
+No external databases or backend required
+
+Runs on:
+
+Live Server in VS Code or a simple local HTTP server (e.g., http-server, Python’s http.server)
+
+🔐 Notes
+Data is not permanently saved. Refreshing the browser clears sessionStorage (but not localStorage).
+
+No real authentication — simulate login/logout using dummy credentials and in-memory validation.
+
+✅ Optional Features You Can Add Later
+Export data as JSON for backup
+
+Print order/reservation summaries
+
+Responsive mobile-first design
